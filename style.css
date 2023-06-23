@@ -13,9 +13,18 @@
 body{
 
     background-color: #272b31;
-    min-height: 100vh;
+
     
     
+}
+footer{
+  display: flex;
+  opacity: 0.4;
+  flex-direction: column;
+  align-items: center;
+}
+footer p{
+  margin-left: 3px;
 }
 
 a{
@@ -135,7 +144,7 @@ button{
     padding: 1em 0;
     
     position: absolute;
-    bottom: 0;
+
     width: 100%;
 }
 
@@ -296,9 +305,21 @@ button{
         width: 150px;
         height: 50px;
         border: 2px solid white;
-        box-shadow: 5px 5px #00ADB5
+        box-shadow: 5px 5px #00ADB5;
+        font-size: 18px;
     }
-    
+    .card{
+      width: 7em;
+      height: 7em;
+      
+    }
+    h2.card__title{
+      font-size: 18px;
+    }
+    p.card_description{
+      font-size: 18px;
+    }
+
   }
 
 @media screen and (max-width:700px) {
@@ -310,5 +331,15 @@ button{
         border: 2px solid white;
         box-shadow: 5px 5px #00ADB5
     }
-    
+    .card{
+      width: 5em;
+      height: 5em;
+      
+    }
+    h2.card__title{
+      font-size: 15px;
+    }
+    p.card_description{
+      font-size: 15px;
+    }
   }
