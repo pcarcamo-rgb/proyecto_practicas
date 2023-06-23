@@ -1,0 +1,139 @@
+* {
+	font-family: 'Bebas Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 100;
+
+}
+
+body {
+	background: #393E46;
+}
+
+button{
+    background-color: #53718800;
+    margin: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px;
+    border: #53718800;
+}
+
+
+.nav{
+
+    background-color: #121417;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  
+    .button-nav{
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      z-index: 0;
+      background: #4c565d35;
+      overflow: hidden;
+      border: none;
+    }
+    .button-nav:hover {
+      color: #FFF;
+    }
+    .button-nav:hover:after {
+      height: 100%;
+    }
+    .button-nav:after {
+      
+      content: "";
+      position: absolute;
+      z-index: -1;
+      transition: all 0.3s ease;
+      left: 0;
+      top: 0;
+      height: 0;
+      width: 100%;
+      background: #00ADB5;
+      
+      
+    }
+
+a {
+	color: #53718800;
+}
+
+.titulo {
+    font-size: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #121417;
+	padding: 20px;
+	margin: 30px;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 5px solid #00ADB5;
+}
+
+div div {
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #121417;
+	padding: 20px;
+	margin: 30px;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 5px solid #00ADB5;
+}
+
+section {
+	margin-top: 10vh;
+}
+textarea {
+	margin: 5px;
+    background-color: #393E46;
+    color: #FFFFFF;
+    border: 1px solid #00ADB5;
+
+}
+form input{
+    padding: 5px;
+}
+
+form textarea{
+    padding: 5px;
+    width: 50vh;
+}
+
+input {
+    background-color: #393E46;
+    color: #FFFFFF;
+    border: 1px solid #00ADB5;
+}
+
+input:focus {
+    outline: 1px solid #00ADB5;
+  }
+
+textarea:focus {
+    outline: 1px solid #00ADB5;
+}
+
+.consultanos {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+
