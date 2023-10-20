@@ -86,7 +86,7 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3em;
+    height: 4 em;
     padding: 10px;
     margin-bottom: 10px;
     position: fixed;
@@ -97,10 +97,12 @@ button{
     padding-bottom: 3em;
   }
 .container.us{
-    max-height: 50vh;
+    max-height: 60vh;
     min-height: 40vh;
-    padding-top: 3em;
+    padding-top: 5em;
     background-color: #393E46;
+    display: flex;
+    align-items: center;
 }
   
 .container.encontrar{
@@ -119,7 +121,7 @@ button{
 
 .nosotros{
     
-    padding: 5px;
+    padding: 5px 2em 5px 5px;
     text-align: center;
 }
 
@@ -207,11 +209,11 @@ button{
     --flow-space: 0.9375rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-self: flex-start;
     height: 100%;
     padding: 12% 1.25rem 1.875rem;
-    background: linear-gradient(0deg, rgba(242,242,242,1) 6%, rgba(161,219,222,1) 33%, rgba(0,173,181,1) 60%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.447) 6%, rgba(0, 0, 0, 0.651) 33%, rgba(2, 2, 2, 0.539) 60%);
   }
   
   .card__content--container {
@@ -220,8 +222,12 @@ button{
   
   .card__title {
     position: relative;
+    margin: 0 auto;
+    text-decoration-line: underline;
+    padding-bottom: 10px;
     width: fit-content;
-    width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+    width: -moz-fit-content;
+    font-size: x-large;
   }
   
   .card__title::after {
@@ -235,7 +241,52 @@ button{
   }
 
 
-  @media (any-hover: hover){
+  .partOfUs {
+    position: relative;
+    height: 14em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.partOfUs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    opacity: 0.3; /* Ajusta el valor de opacidad según tus necesidades */
+    z-index: -1;
+    background: url(/img/pankaj-patel-_SgRNwAVNKw-unsplash.jpg) center bottom/cover no-repeat local;
+}
+
+
+
+  .partOfUs .tituloxxl{
+    
+    text-align: center;
+    
+  }
+  .partOfUs .boton-especialidad{
+    box-shadow: 5px 5px #ffffff;
+  }
+
+  .partOfUs .boton-slide{
+    color: black;
+  }
+  .partOfUs .boton-slide:after{
+
+    background: #00ADB5;
+    
+
+  }
+  
+
+  @media (any-hover: hover){  
     .card__content {
       transform: translateY(100%);
       transition: transform 300ms ease-out;
@@ -298,7 +349,7 @@ button{
     }
   }
 
-
+  
 @media screen and (max-width:900px) {
 
     .boton-especialidad{
