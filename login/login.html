@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    
+    <meta charset="UTF-8">
     <title>CodeGuru</title>
     <link rel="stylesheet" href="style_login.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -19,26 +19,41 @@
         <a href="login.html"><button class="button-nav">Acceder</button></a>
   </header>
  
-  <div class="todo">
+  <div class="gridd">
+        <div class="todo">
 
-    <section class="login">
-        <h5 class="texto1">Login</h5>
-        <input type="text" name="usuario" placeholder="Usuario" class="controls" >
-        <input type="password" name="contraseña" placeholder="Contraseña" class="controls" >
-        <input type="submit" value="Acceder" class="buttons">
-        <div>
-            <h5 class="texto2">Aun no eres usuario?</h5>
-            <input type="button" value="Registrate" class="buttons">
+            <section class="login">
+                <h5 class="texto1">Login</h5>
+                <input type="text" name="usuario" placeholder="Usuario" class="controls" >
+                <input type="password" name="contraseña" placeholder="Contraseña" class="controls" >
+                <input type="submit" value="Acceder" class="buttons">
+            </section>
 
-         </div>
-    </section>
+        </div> 
 
-  </div> 
-  <div class="footer" style="bottom: 0;">
-    <footer>
-        <h1 class="text-footer">Derechos reservados</h1><p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
-    </footer>
+        <div class="todo registrarse">
+
+            <section class="login registro">
+                <h5 class="texto1">Registrate</h5>
+                <form>
+                    <input type="text" name="nombre" placeholder="nombre" class="controls">
+                    <input type="text" name="apellido" placeholder="apellido" class="controls">
+                    <input type="text" name="usuario" placeholder="nombre de usuario" class="controls" >
+                    <input type="mail" name="mail" placeholder="Mail" class="controls">
+                    <input type="number" name="numero" placeholder="Teléfono" class="controls">
+                    <input type="password" name="contraseña" placeholder="Contraseña" class="controls" >
+                    <input type="submit" value="Registrarse" class="buttons buttonr">
+                </form>
+            </section>
+
+        </div>
   </div>
+
+    <div class="footer">
+        <footer>
+            <h1 class="text-footer">Derechos reservados</h1><p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+        </footer>
+    </div>
 
 </body>
 </html>
