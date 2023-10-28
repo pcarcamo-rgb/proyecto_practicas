@@ -15,7 +15,8 @@
   }
 
 .gridd {
-
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 880px){
@@ -41,13 +42,13 @@
 
 @media (min-width:880px){
   .login {
-    height: 400px;
+    height: 20em;
   }
 }
 
   .registrarse {
     grid-column: 2/4;   
-    margin-bottom: 100px; 
+    margin-bottom: 5em; 
   }
 
   form {
