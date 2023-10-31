@@ -25,9 +25,9 @@
 
             <section class="login">
                 <h5 class="texto1">Login</h5>
-                <input type="text" name="usuario" placeholder="Usuario" class="controls" >
-                <input type="password" name="contraseña" placeholder="Contraseña" class="controls" >
-                <input type="submit" value="Acceder" class="buttons">
+                <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario" class="controls" >
+                <input id="passwordLogin" type="password" name="contraseña" placeholder="Contraseña" class="controls" >
+                <input id="submitLogin" type="submit" value="Acceder" class="buttons">
             </section>
 
         </div> 
@@ -36,13 +36,13 @@
 
             <section class="login registro">
                 <h5 class="texto1">Registrate</h5>
-                <form>
-                    <input type="text" name="nombre" placeholder="nombre" class="controls">
-                    <input type="text" name="apellido" placeholder="apellido" class="controls">
-                    <input type="text" name="usuario" placeholder="nombre de usuario" class="controls" >
-                    <input type="email" name="mail" placeholder="Mail" class="controls">
-                    <input type="tel" name="numero" placeholder="Teléfono" class="controls">
-                    <input type="password" name="contraseña" placeholder="Contraseña" class="controls" >
+                <form onsubmit="">
+                    <input id="nombreRegist" type="text" name="nombre" placeholder="nombre" class="controls">
+                    <input id="apellidoRegist" type="text" name="apellido" placeholder="apellido" class="controls">
+                    <input id="usuarioRegist" type="text" name="usuario" placeholder="nombre de usuario" class="controls" >
+                    <input id="emailRegist" type="email" name="mail" placeholder="Mail" class="controls">
+                    <input id="telRegist" type="tel" name="numero" placeholder="Teléfono" class="controls">
+                    <input id="passRegist" type="password" name="contraseña" placeholder="Contraseña" class="controls" >
                     <input type="submit" value="Registrarse" class="buttons buttonr">
                 </form>
             </section>
