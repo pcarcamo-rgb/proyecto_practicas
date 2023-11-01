@@ -1,112 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{} CodeGuru</title>
-    <link rel="stylesheet" href="style.css">
-    <script href = "main.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header class="nav">  
-        <a href="faq/faqhtml.html"><button class="button-nav">FAQ</button></a>      
-        <div>
-           <a href="index.html"><h1 style="color: #EEEEEE; font-size: 40px;">{ } CodeGuru</h1></a> 
-        </div>
-        <a href="login/login.html"><button class="button-nav">Acceder</button></a>
+    <link rel="stylesheet" href="style.css" />
+    <script href="main.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="verifyLogin()">
+    <header class="nav">
+      <a href="faq/faqhtml.html"><button class="button-nav">FAQ</button></a>
+      <div>
+        <a href="index.html"
+          ><h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1></a
+        >
+      </div>
+      <a href="login/login.html" id="accessButton"><button class="button-nav" >Acceder</button></a>
+      <a href="" id="userButton"  style="display: none"
+        > <button class="button-nav" ></button
+      ></a>
     </header>
 
     <div class="container us">
-        <div class="half nosotros">
-            
-            <h1 class="tituloxxxl">Sobre Nosotros</h1>
-            <p>Somos una compañia que busca brindarte un facil, rapido y intuitivo servicio de comunicacion con programadores de alta confianza. 
-                Dandote la oportunidad de poder expander tu negocio con cualquier servicio de software.</p>
-
-        </div>
-        <div class="half">
-
-            <h1 class="programadores tituloxxxl">Nuestros Programadores</h1>
-            <div class="programadores">
-                <article class="card">
-                    <img
-                    class="card__background"
-                    src="img/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"
-                    alt="Foto Perfil"
-                    />
-                    <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Manu Roque</h2>
-                        <p class="card__description">
-                        Full Stack Senior, 10 años de experiencia
-                        </p>
-                    </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img
-                    class="card__background"
-                    src="img/filipp-romanovski-CGKYNN3uuVo-unsplash.jpg"
-                    alt="Foto Perfil"
-                    />
-                    <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Emi Gonsalezz</h2>
-                        <p class="card__description">
-                        FrontEnd Senior, 10 años de experiencia
-                        </p>
-                    </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img
-                    class="card__background"
-                    src="img/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg"
-                    alt="Foto Perfil"
-                    />
-                    <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Pablo Carcamo</h2>
-                        <p class="card__description">
-                        Full Stack Senior, 10 años de experiencia
-                        </p>
-                    </div>
-                    </div>
-                </article>
+      <div class="half nosotros">
+        <h1 class="tituloxxxl">Sobre Nosotros</h1>
+        <p>
+          Somos una compañia que busca brindarte un facil, rapido y intuitivo
+          servicio de comunicacion con programadores de alta confianza. Dandote
+          la oportunidad de poder expander tu negocio con cualquier servicio de
+          software.
+        </p>
+      </div>
+      <div class="half">
+        <h1 class="programadores tituloxxxl">Nuestros Programadores</h1>
+        <div class="programadores">
+          <article class="card">
+            <img
+              class="card__background"
+              src="img/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"
+              alt="Foto Perfil"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Manu Roque</h2>
+                <p class="card__description">
+                  Full Stack Senior, 10 años de experiencia
+                </p>
+              </div>
             </div>
+          </article>
+
+          <article class="card">
+            <img
+              class="card__background"
+              src="img/filipp-romanovski-CGKYNN3uuVo-unsplash.jpg"
+              alt="Foto Perfil"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Emi Gonsalezz</h2>
+                <p class="card__description">
+                  FrontEnd Senior, 10 años de experiencia
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              class="card__background"
+              src="img/lucas-gouvea-aoEwuEH7YAs-unsplash.jpg"
+              alt="Foto Perfil"
+            />
+            <div class="card__content | flow">
+              <div class="card__content--container | flow">
+                <h2 class="card__title">Pablo Carcamo</h2>
+                <p class="card__description">
+                  Full Stack Senior, 10 años de experiencia
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
+      </div>
     </div>
 
     <div class="container encontrar">
+      <div class="half encuentra_programador">
+        <h1 class="tituloxxl" style="text-align: center">
+          Encuentra a tu programador
+        </h1>
+      </div>
 
-        <div class="half encuentra_programador">
-            <h1 class="tituloxxl"style="text-align: center;">Encuentra a tu programador</h1>
-        </div>
-
-        <div class="half especialidades">
-            <h1 class="tituloxxl"style="text-align: center;">Nuestras Especializaciones</h1>
-            <button class="boton-especialidad boton-slide">FullStack React Node</button>
-            <button class="boton-especialidad boton-slide">Desarrollador Web</button>
-            <button class="boton-especialidad boton-slide">Backend</button>
-            <button class="boton-especialidad boton-slide">Frontend</button>
-            <button class="boton-especialidad boton-slide">Bda</button>
-            <button class="boton-especialidad boton-slide">QA</button>
-        </div>
-
+      <div class="half especialidades">
+        <h1 class="tituloxxl" style="text-align: center">
+          Nuestras Especializaciones
+        </h1>
+        <button class="boton-especialidad boton-slide">
+          FullStack React Node
+        </button>
+        <button class="boton-especialidad boton-slide">
+          Desarrollador Web
+        </button>
+        <button class="boton-especialidad boton-slide">Backend</button>
+        <button class="boton-especialidad boton-slide">Frontend</button>
+        <button class="boton-especialidad boton-slide">Bda</button>
+        <button class="boton-especialidad boton-slide">QA</button>
+      </div>
     </div>
-    <div class="partOfUs" >
-        <h1 class="tituloxxl">Todavia no sos parte de Nosotros?</h1>
-        <button class="boton-especialidad boton-slide">Registrate</button>
-        
+    <div class="partOfUs">
+      <h1 class="tituloxxl">Todavia no sos parte de Nosotros?</h1>
+      <button class="boton-especialidad boton-slide">Registrate</button>
     </div>
     <div class="footer">
-        <footer>
-            <h1 class="text-footer">Derechos reservados</h1><p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
-        </footer>
+      <footer>
+        <h1 class="text-footer">Derechos reservados</h1>
+        <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+      </footer>
     </div>
-</body>
+
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -17,7 +17,8 @@
         <div>
            <a href="../index.html"><h1 style="color: #ffffff; font-size: 40px;">{ } CodeGuru</h1></a> 
         </div>
-        <a href="login.html"><button class="button-nav">Acceder</button></a>
+        <a id="accessButton" href="login.html"><button class="button-nav">Acceder</button></a>
+        <a  style="display: none;" id="userButton"><button class="button-nav" ></button></a>
   </header>
  
   <div class="gridd">
@@ -27,7 +28,7 @@
                 <h5 class="texto1">Login</h5>
                 <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario" class="controls" >
                 <input id="passwordLogin" type="password" name="contraseña" placeholder="Contraseña" class="controls" >
-                <input id="submitLogin" type="submit" value="Acceder" class="buttons">
+                <input id="submitLogin" type="submit" onclick="login()" value="Acceder" class="buttons">
             </section>
 
         </div> 

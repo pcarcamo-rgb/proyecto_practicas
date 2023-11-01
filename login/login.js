@@ -1,4 +1,6 @@
 const formulario = document.getElementById('formRegistro');
+const accessButton = document.getElementById('accessButton')
+const userButton = document.getElementById('userButton')
 
 formulario.addEventListener('submit',(event) =>{
     event.preventDefault()
@@ -28,6 +30,9 @@ formulario.addEventListener('submit',(event) =>{
            sendEmail(formData.get('mail'), info.userId);
         }
     })
+    .catch(error =>{
+        throw (error)
+    })
 })
 
 const sendEmail = (email,userId) => {
@@ -45,6 +50,48 @@ const sendEmail = (email,userId) => {
             alert('Verifique su Mail')
         }
     })
+    .catch(error =>{
+        throw(error)
+    })
 }
 
+
+const login = () =>{
+    const userLogin = document.getElementById('usuarioLogin').value
+    const passLogin = document.getElementById('passwordLogin').value
+    
+    if(userLogin && passLogin){
+        fetch('https://gregarious-raindrop-0fb73e.netlify.app/loginUser',{
+            method: "POST",
+            body:JSON.stringify({
+                usernameUsuario: userLogin,
+                passwordUsuario: passLogin
+            }),
+            headers:{'Content-type': 'application/json; charset=UTF-8'}
+        })
+        .then(res => {
+            if(res.status === 200){
+                return res.json()
+            }else{
+                throw new Error('Error interno al intentar iniciar sesion'+ res.status + " "+ res.statusText)
+            }
+        })
+        .then(data => {
+            console.table(data)
+            console.log(data.status)
+            alert('Logeado correctaemente')
+            accessButton.style.display = 'none'
+            userButton.style.display = 'block'
+            userButton.innerText = userLogin
+            window.location = '../index.html'
+            window.sessionStorage.setItem('username',userLogin)
+
+
+            
+        })
+        .catch(error => {
+            throw (error)
+        })
+    }
+}
 
