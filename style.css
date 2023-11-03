@@ -261,7 +261,7 @@ button{
     background: #ffffff;
     opacity: 0.3; /* Ajusta el valor de opacidad según tus necesidades */
     z-index: -1;
-    background: url(/img/pankaj-patel-_SgRNwAVNKw-unsplash.jpg) center bottom/cover no-repeat local;
+    background: url(./img/pankaj-patel-_SgRNwAVNKw-unsplash.jpg) center bottom/cover no-repeat local;
 }
 
 

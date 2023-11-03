@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CodeGurú</title>
-	<link rel="stylesheet" type="text/css" href="estilofaq.css">
-	<link rel="icon" href="icono.ico">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../style.css">
-
-</head>
-<body>
-	<header class="nav">
-        <a><button class="button-nav">FAQ</button></a>
-        <div>
-           <a href="../index.html"><h1 style="color: #EEEEEE; font-size: 40px;">{ } CodeGuru</h1></a> 
-        </div>
-        <a href="../login/login.html"><button class="button-nav">Acceder</button></a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeGurú</title>
+    <link rel="stylesheet" type="text/css" href="estilofaq.css" />
+    <link rel="icon" href="icono.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body onload="verifyLogin()">
+    <header class="nav">
+      <a><button class="button-nav">FAQ</button></a>
+      <div>
+        <a href="../index.html"
+          ><h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1></a
+        >
+      </div>
+      <a href="login/login.html" id="linkAccess"><button id="accesButton" class="button-nav" >Acceder</button></a>
+      <a href="../usuario/user.html" id="linkUser" style="display: none"><button id="userButton" style="display: none;" class="button-nav"></button></a>
     </header>
-	<section>
-		<div class="faq">
-			<h1 class="titulo">FAQ - Preguntas Frecuentes</h1>
-			<div class="faq__preguntas">
-				<h2>¿Me cobran si soy programador?</h2>
-				<p>No, se le cobra al cliente una vez que usa tu servicio. Al programador no se le cobra ningún cargo.</p>
-			</div>
-			<div class="faq__preguntas">
-				<h2>¿Es segura la página?</h2>
-				<p>Si, contamos con muy buena seguridad, por lo que tus datos personales y bancarios no estarán comprometidos.</p>
-			</div>
-			<div class="faq__preguntas">
-				<h2>¿Es solo para un tipo de programador?</h2>
-				<p>No, CodeGuru es para TODO tipo de programador, ya sea que te especialices en Desarrollo Web, Base de Datos, Movil, etc. CodeGuru es para TODOS los tipos de desarrolladores.</p>
-			</div>
-			<div class="faq__preguntas">
-				<h2>¿Que tipo de programadores hay?</h2>
-				<p>Hay todo tipo de programadores, en CodeGuru vas a encontrar programador perfecto, para el trabajo que necesitas.</p>
-			</div>
-			<div class="faq__consultanos">
-				<h2 class="consultanos">CONSULTANOS</h2>
-				<form>
-					<input type="text" name="nombre" placeholder="nombre">
-					<input type="mail" placeholder="mail"> 
-					<textarea placeholder="Escribínos tu consulta.."></textarea> 
-					<input type="submit" class="buttons">
-				</form>
-			</div>
-		</div>
-		<div class="footer">
-			<footer>
-				<h1 class="text-footer">Derechos reservados</h1><p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
-			</footer>
-		</div>
-	</section>
-
-</body>
+    <section>
+      <div class="faq">
+        <h1 class="titulo">FAQ - Preguntas Frecuentes</h1>
+        <div class="faq__preguntas">
+          <h2>¿Me cobran si soy programador?</h2>
+          <p>
+            No, se le cobra al cliente una vez que usa tu servicio. Al
+            programador no se le cobra ningún cargo.
+          </p>
+        </div>
+        <div class="faq__preguntas">
+          <h2>¿Es segura la página?</h2>
+          <p>
+            Si, contamos con muy buena seguridad, por lo que tus datos
+            personales y bancarios no estarán comprometidos.
+          </p>
+        </div>
+        <div class="faq__preguntas">
+          <h2>¿Es solo para un tipo de programador?</h2>
+          <p>
+            No, CodeGuru es para TODO tipo de programador, ya sea que te
+            especialices en Desarrollo Web, Base de Datos, Movil, etc. CodeGuru
+            es para TODOS los tipos de desarrolladores.
+          </p>
+        </div>
+        <div class="faq__preguntas">
+          <h2>¿Que tipo de programadores hay?</h2>
+          <p>
+            Hay todo tipo de programadores, en CodeGuru vas a encontrar
+            programador perfecto, para el trabajo que necesitas.
+          </p>
+        </div>
+        <div class="faq__consultanos">
+          <h2 class="consultanos">CONSULTANOS</h2>
+          <form>
+            <input type="text" name="nombre" placeholder="nombre" />
+            <input type="mail" placeholder="mail" />
+            <textarea placeholder="Escribínos tu consulta.."></textarea>
+            <input type="submit" class="buttons" />
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <footer>
+          <h1 class="text-footer">Derechos reservados</h1>
+          <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+        </footer>
+      </div>
+    </section>
+    <script src="../loadLogin.js"></script>
+  </body>
 </html>
