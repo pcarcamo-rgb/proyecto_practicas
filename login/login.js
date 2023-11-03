@@ -76,16 +76,18 @@ const login = () =>{
                 throw new Error('Error interno al intentar iniciar sesion'+ res.status + " "+ res.statusText)
             }
         })
-        .then(data => {
-            console.table(data)
-            console.log(data.status)
+        .then(({exist, token, user}) => {
+            
+            console.table(user)
             alert('Logeado correctaemente')
             accessButton.style.display = 'none'
             userButton.style.display = 'block'
             userButton.innerText = userLogin
             window.location = '../index.html'
-            window.sessionStorage.setItem('username',userLogin)
 
+            window.sessionStorage.setItem('user', JSON.stringify(user), token)
+
+            console.table(window.sessionStorage.getItem('user'))
 
             
         })
