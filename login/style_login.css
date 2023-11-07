@@ -172,3 +172,12 @@ button{
     
     
   }
+
+  .footer{
+    background-color: #121417;
+    padding: 1em 0;
+    
+    position: absolute;
+
+    width: 100%;
+}
