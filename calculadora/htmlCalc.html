@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{} CodeGuru</title>
+    <link rel="stylesheet" href="styleCalc.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="../style.css">
+
+  </head>
+  <body onload="verifyLogin()">
+    <header class="nav">
+      <a href="faq/faqhtml.html"><button class="button-nav buttonn">FAQ</button></a>
+      <div>
+        <a href="index.html"><h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1></a>
+      </div>
+      <a href="login/login.html" id="linkAccess"
+        ><button id="accesButton" class="button-nav buttonn">Acceder</button></a
+      >
+      <a href="usuario/user.html" id="linkUser" style="display: none"
+        ><button
+          id="userButton"
+          style="display: none"
+          class="button-nav"
+        ></button
+      ></a>
+    </header>
+        <script src="jsCalc.js"></script>
+        <div class="calculadora">
+          <h1 class="titulo">Calculadora de comisión</h1>
+          <input class="out" type="text" name="out" id="out" value="$" readonly> 
+          <div class="fila1 botones">
+            <button onclick="agregarNumero(1)">1</button>
+            <button onclick="agregarNumero(2)">2</button>
+            <button onclick="agregarNumero(3)">3</button>
+          </div>
+          <div class="fila2 botones">
+            <button onclick="agregarNumero(4)">4</button>
+            <button onclick="agregarNumero(5)">5</button>
+            <button onclick="agregarNumero(6)">6</button>
+          </div>
+          <div class="fila3 botones">
+            <button onclick="agregarNumero(7)">7</button>
+            <button onclick="agregarNumero(8)">8</button>
+            <button onclick="agregarNumero(9)">9</button>
+          </div>
+          <div class="fila4 botones">
+            <button onclick="reiniciarCalculadora()" class="reiniciar"">C</button>
+            <button onclick="agregarNumero(0)">0</button>
+            <button onclick="borrarUltimoDigito()" class="borrar">Borrar</button>
+          </div>
+          <button class="calcular" onclick="calcularComision()">Calcular comisión</button>
+      </div>
+    <div class="footer">
+    <footer>
+        <h1 class="text-footer">Derechos reservados</h1><p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+    </footer>
+    </div>
+  </body>
+</html>
