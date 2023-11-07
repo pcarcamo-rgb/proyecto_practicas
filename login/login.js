@@ -1,5 +1,14 @@
 const formulario = document.getElementById('formRegistro');
 
+
+function verificarObjetoNoVacio(obj) {
+    for (const key in obj) {
+      if (obj[key] === "") {
+        throw new Error(`El valor de ${key} está vacío`);
+      }
+    }
+  }
+
 formulario.addEventListener('submit',(event) =>{
     event.preventDefault()
     
@@ -14,6 +23,13 @@ formulario.addEventListener('submit',(event) =>{
         emailUsuario: formData.get('mail'),
         telefonoUsuario:formData.get('numero'),
         passwordUsuario: formData.get('contraseña')}
+    }
+
+    for (const key in user.user) {
+        if (user.user[key].trim() === "") {
+            alert(`Debe completar todos los datos para poder registrarse`);
+            return; 
+        }
     }
 
     fetch('https://gregarious-raindrop-0fb73e.netlify.app/registUser', {
@@ -74,9 +90,8 @@ const login = () =>{
                 throw new Error('Error interno al intentar iniciar sesion'+ res.status + " "+ res.statusText)
             }
         })
-        .then(({exist, token, user}) => {
+        .then((data) => {
             
-         
             alert('Logeado correctaemente')
             
             window.location = '../index.html'
