@@ -94,9 +94,9 @@ const login = () =>{
             
             alert('Logeado correctaemente')
             
-            window.location = '../index.html'
+            //window.location = '../index.html'
 
-            window.sessionStorage.setItem('user', JSON.stringify(user), token)
+            window.sessionStorage.setItem('user', JSON.stringify(data.user), data.token)
 
 
             
