@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeGurú</title>
+    <link rel="stylesheet" type="text/css" href="usuario.css" />
+    <link rel="icon" href="icono.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body onload="verifyLogin()">
+    <header class="nav">
+        <a><button class="button-nav">FAQ</button></a>
+        <div>
+            <a href="../index.html">
+                <h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1>
+            </a>
+        </div>
+        <a href="../usuario/user.html" id="linkUser" style="display: none"><button id="userButton"
+                style="display: none;" class="button-nav"></button></a>
+    </header>
+    <section>
+        <div class="usuario-general">
+            <h1 class="titulo">@usuario</h1>
+            <div class="usuario-general__cuerpo">
+                <h2 class="usuario-general__cuerpo__h2">trabajos en proceso</h2>
+
+            </div>
+            <div class="usuario-general__cuerpo">
+                <h2 class="usuario-general__cuerpo__h2">solicitudes de trabajos</h2>
+
+            </div>
+            <div class="usuario-general__cuerpo">
+                <h2 class="usuario-general__cuerpo__h2">ingresos</h2>
+
+            </div>
+        </div>
+        <div class="footer">
+            <footer>
+                <h1 class="text-footer">Derechos reservados</h1>
+                <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+            </footer>
+        </div>
+    </section>
+    <script src="../loadLogin.js"></script>
+</body>
+
+</html>
