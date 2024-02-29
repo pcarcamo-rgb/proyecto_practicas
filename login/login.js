@@ -50,7 +50,7 @@ formulario.addEventListener('submit',(event) =>{
 })
 
 const sendEmail = (email,userId) => {
-    fetch('https://gregarious-raindrop-0fb73e.netlify.app/sendEmail',{
+    fetch('https://gregarious-raindrop-0fb73e.netlify.app/sendVerifyEmail',{
         method:"POST",
         body:JSON.stringify({
             email: email,

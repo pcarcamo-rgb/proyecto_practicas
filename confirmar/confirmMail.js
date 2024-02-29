@@ -20,4 +20,4 @@ function confirmMail (){
         })
         .catch(error => {
           console.error('Error:', error);
-        });
+        })};

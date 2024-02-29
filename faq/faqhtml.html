@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
+    <script src="../loadLogin.js"></script>
   </head>
   <body onload="verifyLogin()">
     <header class="nav">
@@ -22,8 +23,16 @@
           ><h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1></a
         >
       </div>
-      <a href="login/login.html" id="linkAccess"><button id="accesButton" class="button-nav" >Acceder</button></a>
-      <a href="../usuario/user.html" id="linkUser" style="display: none"><button id="userButton" style="display: none;" class="button-nav"></button></a>
+      <a href="login/login.html" id="linkAccess"
+        ><button id="accesButton" class="button-nav">Acceder</button></a
+      >
+      <a href="../usuario/user.html" id="linkUser" style="display: none"
+        ><button
+          id="userButton"
+          style="display: none"
+          class="button-nav"
+        ></button
+      ></a>
     </header>
     <section>
       <div class="faq">
@@ -59,10 +68,13 @@
         </div>
         <div class="faq__consultanos">
           <h2 class="consultanos">CONSULTANOS</h2>
-          <form>
+          <form id="faqForm">
             <input type="text" name="nombre" placeholder="nombre" />
-            <input type="mail" placeholder="mail" />
-            <textarea placeholder="Escribínos tu consulta.."></textarea>
+            <input type="mail" name="mail" placeholder="mail" />
+            <textarea
+              name="faq"
+              placeholder="Escribínos tu consulta.."
+            ></textarea>
             <input type="submit" class="buttons" />
           </form>
         </div>
@@ -74,6 +86,6 @@
         </footer>
       </div>
     </section>
-    <script src="../loadLogin.js"></script>
+    <script src="./faqMail.js"></script>
   </body>
 </html>

@@ -14,8 +14,12 @@ function verifyLogin  () {
         linkUser.style.display = 'block'
         userButton.style.display = 'block'
         userButton.innerText = user[0].usernameUsuario
-        partOfUsContainer.style.display = 'none'
-        calculadora.style.display= 'flex'
+        
+        if (partOfUsContainer) {
+            partOfUsContainer.style.display = 'none'; calculadora.style.display = 'flex';
+        }
+       
+        
 
     }
 }
