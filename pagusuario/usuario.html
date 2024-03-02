@@ -13,20 +13,30 @@
     <link rel="stylesheet" href="../style.css" />
 </head>
 
-<body onload="verifyLogin()">
+<body>
     <header class="nav">
-        <a><button class="button-nav">FAQ</button></a>
+        <ul class="menu-desplegable">
+            <li> <h2 class="button-nav">menú</h2>
+                <ul>
+                    <li class="button-nav items"><a href="../index.html"><h3>inicio</h3></a></li>
+                    <li class="button-nav items"><a href="../calculadora/htmlCalc.html"><h3>calculadora de comisiones</h3></a></li>
+                    <li class="button-nav items"><a href="#"><h3>editar perfil</h3></a></li>
+                    <li class="button-nav items"><a href="#"><h3>cerrar sesión</h3></a></li>
+                </ul>
+            </li>
+        </ul>
         <div>
             <a href="../index.html">
                 <h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1>
             </a>
         </div>
+        <a href="#" id="linkAccess"><button id="accesButton" class="button-nav">@usuario</button></a>
         <a href="../usuario/user.html" id="linkUser" style="display: none"><button id="userButton"
                 style="display: none;" class="button-nav"></button></a>
     </header>
     <section>
         <div class="usuario-general">
-            <h1 class="titulo">@usuario</h1>
+            <h1 class="usuario-general__nombre">@usuario</h1>
             <div class="usuario-general__cuerpo">
                 <h2 class="usuario-general__cuerpo__h2">trabajos en proceso</h2>
 
