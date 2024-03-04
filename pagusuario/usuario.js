@@ -39,3 +39,9 @@ const btnCancelarModal = document.getElementById('btnCancelarModal')
 btnCancelarModal.addEventListener('click', () => {
     deleteModal.close();
 })
+
+
+const closeSession = () => {
+    sessionStorage.removeItem('user');
+    window.location = '../login/login.html'
+}

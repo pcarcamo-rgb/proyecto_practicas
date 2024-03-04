@@ -1,122 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CodeGuru</title>
-    <link rel="stylesheet" href="style_login.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <header class="nav">
-      <a href="../faq/faqhtml.html"><button class="button-nav">FAQ</button></a>
-      <div>
-        <a href="../index.html"
-          ><h1 style="color: #ffffff; font-size: 40px">{ } CodeGuru</h1></a
-        >
-      </div>
-      <a href="login/login.html" id="linkAcces"
-        ><button id="accesButton" class="button-nav">Acceder</button></a
-      >
-      <a href="usuario/user.html" id="linkUser" style="display: none"
-        ><button
-          id="userButton"
-          style="display: none"
-          class="button-nav"
-        ></button
-      ></a>
-    </header>
 
-    <div class="gridd">
-      <div class="todo">
-        <section class="login">
-          <h5 class="texto1">Login</h5>
-          <input
-            id="usuarioLogin"
-            type="text"
-            name="usuario"
-            placeholder="Usuario"
-            class="controls"
-          />
-          <input
-            id="passwordLogin"
-            type="password"
-            name="contraseña"
-            placeholder="Contraseña"
-            class="controls"
-          />
-          <input
-            id="submitLogin"
-            type="submit"
-            onclick="login()"
-            value="Acceder"
-            class="buttons"
-          />
-        </section>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeGuru</title>
+  <link rel="stylesheet" href="style_login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-      <div class="todo registrarse">
-        <section class="login registro">
-          <h5 class="texto1">Registrate</h5>
-          <form id="formRegistro">
-            <input
-              id="nombreRegist"
-              type="text"
-              name="nombre"
-              placeholder="nombre"
-              class="controls"
-            />
-            <input
-              id="apellidoRegist"
-              type="text"
-              name="apellido"
-              placeholder="apellido"
-              class="controls"
-            />
-            <input
-              id="usuarioRegist"
-              type="text"
-              name="usuario"
-              placeholder="nombre de usuario"
-              class="controls"
-            />
-            <input
-              id="emailRegist"
-              type="email"
-              name="mail"
-              placeholder="Mail"
-              class="controls"
-            />
-            <input
-              id="telRegist"
-              type="tel"
-              name="numero"
-              placeholder="Teléfono"
-              class="controls"
-            />
-            <input
-              id="passRegist"
-              type="password"
-              name="contraseña"
-              placeholder="Contraseña"
-              class="controls"
-            />
-            <input type="submit" value="Registrarse" class="buttons buttonr" />
-          </form>
-        </section>
-      </div>
+<body>
+  <header class="nav">
+    <a href="../faq/faqhtml.html"><button class="button-nav">FAQ</button></a>
+    <div>
+      <a href="../index.html">
+        <h1 style="color: #ffffff; font-size: 40px">{ } CodeGuru</h1>
+      </a>
+    </div>
+    <a href="login/login.html" id="linkAcces"><button id="accesButton" class="button-nav">Acceder</button></a>
+    <a href="usuario/user.html" id="linkUser" style="display: none"><button id="userButton" style="display: none"
+        class="button-nav"></button></a>
+  </header>
+
+  <div class="gridd">
+    <div class="todo">
+      <section class="login">
+        <h5 class="texto1">Login</h5>
+        <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario" class="controls" />
+        <input id="passwordLogin" type="password" name="contraseña" placeholder="Contraseña" class="controls" />
+        <input id="submitLogin" type="submit" onclick="login()" value="Acceder" class="buttons" />
+      </section>
     </div>
 
-    <div class="footer">
-      <footer>
-        <h1 class="text-footer">Derechos reservados</h1>
-        <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
-      </footer>
+    <div class="todo registrarse">
+      <section class="login registro">
+        <h5 class="texto1">Registrate</h5>
+        <form id="formRegistro">
+          <input id="nombreRegist" type="text" name="nombre" placeholder="nombre" class="controls" />
+          <input id="apellidoRegist" type="text" name="apellido" placeholder="apellido" class="controls" />
+          <input id="usuarioRegist" type="text" name="usuario" placeholder="nombre de usuario" class="controls" />
+          <input id="emailRegist" type="email" name="mail" placeholder="Mail" class="controls" />
+          <input id="telRegist" type="tel" name="numero" placeholder="Teléfono" class="controls" />
+          <input id="passRegist" type="password" name="contraseña" placeholder="Contraseña" class="controls" />
+          <input type="submit" value="Registrarse" class="buttons buttonr" />
+        </form>
+      </section>
     </div>
-    <script src="login.js"></script>
-  </body>
+  </div>
+
+  <div class="footer">
+    <footer>
+      <h1 class="text-footer">Derechos reservados</h1>
+      <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+    </footer>
+  </div>
+
+  <dialog id="errorModal">
+    <div>
+      <h1>ERROR</h1>
+      <h2 id="errorModalContent"></h2>
+      <button onclick="closeModal()">Aceptar</button>
+    </div>
+  </dialog>
+
+  <script src="login.js"></script>
+</body>
+
 </html>
