@@ -1,155 +1,133 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CodeGurú</title>
-    <link rel="stylesheet" type="text/css" href="usuario.css" />
-    <link rel="icon" href="icono.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../style.css" />
-  </head>
 
-  <body>
-    <header class="nav">
-      <ul class="menu-desplegable">
-        <li>
-          <h2 class="button-nav">menú</h2>
-          <ul>
-            <li class="button-nav items">
-              <a href="../index.html"><h3>inicio</h3></a>
-            </li>
-            <li class="button-nav items">
-              <a href="../calculadora/htmlCalc.html"
-                ><h3>calculadora de comisiones</h3></a
-              >
-            </li>
-            <li class="button-nav items">
-              <a onclick="closeSession()" href="#"><h3>cerrar sesión</h3></a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <div>
-        <a href="../index.html">
-          <h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1>
-        </a>
-      </div>
-      <a href="../usuario/user.html" id="linkUser" style="display: none"
-        ><button
-          id="userButton"
-          style="display: none"
-          class="button-nav"
-        ></button
-      ></a>
-    </header>
-    <main>
-      <form class="form" id="userInfoForm">
-        <div class="title">Información Personal</div>
-        <label for="name">Nombre</label>
-        <input type="text" name="name" title="nombre" id="name" class="input" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeGurú</title>
+  <link rel="stylesheet" type="text/css" href="usuario.css" />
+  <link rel="icon" href="icono.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <label for="lastName">Apellido</label>
-        <input
-          type="text"
-          name="lastName"
-          title="apellido"
-          id="lastName"
-          class="input"
-        />
-
-        <label>Telefono</label>
-        <input
-          type="text"
-          name="telefono"
-          id="telefono"
-          title="telefono"
-          class="input"
-        />
-
-        <label>Usuario</label>
-        <input
-          type="text"
-          name="user"
-          id="user"
-          title="usuario"
-          class="input"
-        />
-        <label for="mail">Email</label>
-        <input type="text" name="mail" title="email" id="mail" class="input" />
-
-        <div class="personalInfoButtons">
-          <button disabled id="saveButton" class="buttonUser">Guardar</button>
-          <button type="button" id="deleteButton" class="buttonUserDelete">
-            Eliminar
-          </button>
-        </div>
-      </form>
-
-      <section class="proyectos">
-        <div class="title">Mis Proyectos</div>
-        <div class="container">
-          <div class="card-proyecto">
-            <a class="card1" href="#">
-              <p>Renovacion App SANTANDER</p>
-              <p class="small">
-                Proyecto de renovacion de la App del Banco Santander
-              </p>
-              <div class="go-corner" href="#">
-                <div class="go-arrow">→</div>
-              </div>
+<body>
+  <header class="nav">
+    <ul class="menu-desplegable">
+      <li>
+        <h2 class="button-nav">menú</h2>
+        <ul>
+          <li class="button-nav items">
+            <a href="../index.html">
+              <h3>inicio</h3>
             </a>
-          </div>
-          <div class="card-proyecto">
-            <a class="card1" href="#">
-              <p>Ecommerce</p>
-              <p class="small">Pagina de compras para PIME</p>
-              <div class="go-corner" href="#">
-                <div class="go-arrow">→</div>
-              </div>
+          </li>
+          <li class="button-nav items">
+            <a href="../calculadora/htmlCalc.html">
+              <h3>calculadora de comisiones</h3>
             </a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <div class="footer" style="bottom: 0">
-      <footer>
-        <h1 class="text-footer">Derechos reservados</h1>
-        <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
-      </footer>
+          </li>
+          <li class="button-nav items">
+            <a onclick="closeSession()" href="#">
+              <h3>cerrar sesión</h3>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <a href="../index.html">
+        <h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1>
+      </a>
     </div>
+    <a href="../usuario/user.html" id="linkUser" style="display: none"><button id="userButton" style="display: none"
+        class="button-nav"></button></a>
+  </header>
+  <main>
+    <form class="form" id="userInfoForm">
+      <div class="title">Información Personal</div>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" title="nombre" id="name" class="input" />
 
-    <dialog id="closeUser">
-      <form id="closeUserContent" method="dialog">
-        <label>Esta seguro de querer dar de baja su Usuario?</label>
-        <div class="checkbox-wrapper">
-          <label for="borrarInfo"
-            >Borrar toda mi información de la aplicación</label
-          >
-          <input type="checkbox" id="borrarInfo" />
-        </div>
-        <div>
-          <button type="button" class="buttonUser" id="btnCancelarModal">
-            Cancelar
-          </button>
-          <button class="buttonUserDelete" id="btnDarDeBajaModal" type="button">
-            Dar de Baja
-          </button>
-        </div>
-      </form>
-    </dialog>
+      <label for="lastName">Apellido</label>
+      <input type="text" name="lastName" title="apellido" id="lastName" class="input" />
 
-    <section class="programadorSection">
-        <h1>Eres programador y quieres ofrecer tus servicios?</h1>
-        <button type="button" class="buttonUser">Haz click para mas informacion!</button>
+      <label>Telefono</label>
+      <input type="text" name="telefono" id="telefono" title="telefono" class="input" />
+
+      <label>Usuario</label>
+      <input type="text" name="user" id="user" title="usuario" class="input" />
+      <label for="mail">Email</label>
+      <input type="text" name="mail" title="email" id="mail" class="input" />
+
+      <div class="personalInfoButtons">
+        <button disabled id="saveButton" type="button" class="buttonUser">Guardar</button>
+        <button type="button" id="deleteButton" class="buttonUserDelete">
+          Eliminar
+        </button>
+      </div>
+    </form>
+
+    <section class="proyectos">
+      <div class="title">Mis Proyectos</div>
+      <div class="container">
+        <div class="card-proyecto">
+          <a class="card1" href="#">
+            <p>Renovacion App SANTANDER</p>
+            <p class="small">
+              Proyecto de renovacion de la App del Banco Santander
+            </p>
+            <div class="go-corner" href="#">
+              <div class="go-arrow">→</div>
+            </div>
+          </a>
+        </div>
+        <div class="card-proyecto">
+          <a class="card1" href="#">
+            <p>Ecommerce</p>
+            <p class="small">Pagina de compras para PIME</p>
+            <div class="go-corner" href="#">
+              <div class="go-arrow">→</div>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
+  </main>
+  <div class="footer" style="bottom: 0">
+    <footer>
+      <h1 class="text-footer">Derechos reservados</h1>
+      <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+    </footer>
+  </div>
 
-    <script src="usuario.js"></script>
-    <script src="../loadLogin.js"></script>
-  </body>
+  <dialog id="closeUser">
+    <form id="closeUserContent" method="dialog">
+      <label>Esta seguro de querer dar de baja su Usuario?</label>
+      <div class="checkbox-wrapper">
+        <label for="borrarInfo">Borrar toda mi información de la aplicación</label>
+        <input type="checkbox" id="borrarInfo" />
+      </div>
+      <div>
+        <button type="button" class="buttonUser" id="btnCancelarModal">
+          Cancelar
+        </button>
+        <button class="buttonUserDelete" id="btnDarDeBajaModal" type="button">
+          Dar de Baja
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <section class="programadorSection">
+    <h1>Eres programador y quieres ofrecer tus servicios?</h1>
+    <button type="button" class="buttonUser">Haz click para mas informacion!</button>
+  </section>
+
+  <script src="usuario.js"></script>
+  <script src="../loadLogin.js"></script>
+</body>
+
 </html>

@@ -52,8 +52,7 @@ formulario.addEventListener('submit', (event) => {
             }
         })
         .catch(error => {
-            console.error('Hubo un error:', error.message); // Accede a error.message para ver el mensaje de error
-            // Detener la cadena de promesas aquí
+            console.error('Hubo un error:', error.message);
             return;
         });
 
