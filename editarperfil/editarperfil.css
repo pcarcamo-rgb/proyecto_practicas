@@ -1,0 +1,188 @@
+/* GENERALES */
+
+* {
+    font-family: 'Bebas Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 100;
+
+}
+
+body {
+    background: #393E46;
+}
+
+
+
+a {
+    color: #53718800;
+}
+
+p {
+    display: inline;
+}
+
+/* NAVEGACION */
+
+.nav {
+
+    background-color: #121417;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.button-nav {
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    z-index: 0;
+    background: #4c565d35;
+    overflow: hidden;
+    border: none;
+}
+
+.button-nav:hover {
+    color: #FFF;
+}
+
+.button-nav:hover:after {
+    height: 100%;
+}
+
+.button-nav:after {
+
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background: #00ADB5;
+
+
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+.menu-desplegable li a {
+    display: block;
+}
+
+.menu-desplegable>li {
+    float: left;
+}
+
+.menu-desplegable li ul {
+    display: none;
+    position: absolute;
+    background-color: #000;
+}
+
+.menu-desplegable li:hover>ul {
+    display: block;
+}
+
+.items {
+    background-color: #000;
+}
+
+
+
+/* ESTILOS ESPECIFICOS */
+
+.usuario-general__nombre {
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #121417;
+    padding: 20px;
+    margin: 30px;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 5px solid #00ADB5;
+}
+
+.estilo {
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #121417;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 5px solid #00ADB5;
+}
+
+.estilomodal {
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #121417;
+    padding: 20px;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 5px solid #00ADB5;
+    transform: translate(40%, 150%)
+}
+
+section {
+    margin-top: 13vh;
+}
+
+
+.usuario-general {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.usuario-general__cuerpo {
+    margin: 5px 30px 10px;
+}
+
+
+.usuario-general__cuerpo__h2 {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.buttons {
+    width: 100%;
+    background-color: #53718800;
+    border-radius: 0.5em;
+    margin: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px;
+    border-color: #00ADB5;
+    margin-bottom: 15px;
+}
+
+.datos {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, .55);
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeGurú</title>
+    <link rel="stylesheet" type="text/css" href="editarperfil.css" />
+    <link rel="icon" href="icono.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <header class="nav">
+        <ul class="menu-desplegable">
+            <li>
+                <h2 class="button-nav">menú</h2>
+                <ul>
+                    <li class="button-nav items"><a href="../index.html">
+                            <h3>inicio</h3>
+                        </a></li>
+                    <li class="button-nav items"><a href="../calculadora/htmlCalc.html">
+                            <h3>calculadora de comisiones</h3>
+                        </a></li>
+                    <li class="button-nav items"><a href="#">
+                            <h3>editar perfil</h3>
+                        </a></li>
+                    <li class="button-nav items"><a href="#">
+                            <h3>cerrar sesión</h3>
+                        </a></li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+            <a href="../index.html">
+                <h1 style="color: #eeeeee; font-size: 40px">{ } CodeGuru</h1>
+            </a>
+        </div>
+        <a href="#" id="linkAccess"><button id="accesButton" class="button-nav">@usuario</button></a>
+        <a href="../usuario/user.html" id="linkUser" style="display: none"><button id="userButton"
+                style="display: none;" class="button-nav"></button></a>
+    </header>
+    <section>
+        <div class="usuario-general">
+            <div class="usuario-general__cuerpo estilo">
+                <h1 class="usuario-general__cuerpo__h2">datos de usuario</h1>
+                <!-- Datos del Usuario-->
+                <div>
+                    <div>
+                        <p>nombre: </p>
+                        <p class="datos">@nombre </p>
+                        <p class="datos">@apellido</p>
+                        <button id="btnnombre" class="buttons">editar nombre</button>
+                    </div>
+                    <div>
+                        <p>nickname: </p>
+                        <p class="datos">@nickname</p>
+                        <button id="btnnickname" class="buttons">editar nickname</button>
+                    </div>
+                    <div>
+                        <p>mail: </p>
+                        <p class="datos">@mailusuario</p>
+                        <button id="btnmail" class="buttons">editar mail</button>
+                    </div>
+                    <div>
+                        <p>contraseña: </p>
+                        <p>@contraseña</p>
+                        <button id="btncontraseña" class="buttons">editar contraseña</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Models -->
+
+            <dialog id="mdlnombre" class="editnombre estilomodal">
+                <form method="dialog">
+                    <label>nuevo nombre</label>
+                    <input type="text" name="nuevonombre" id="nuevonombre">
+                    <label>nuevo apellido</label>
+                    <input type="text" name="nuevonombre" id="nuevonombre">
+                    <button id="btncancelarnombre">cancelar</button>
+                    <button type="submit">guardar cambios</button>
+                </form>
+            </dialog>
+            <dialog id="mldnickname" class="editnombre estilomodal">
+                <form method="dialog">
+                    <label>nuevo nickname</label>
+                    <input type="text" name="nuevonombre" id="nuevonombre">
+                    <button id="btncancelarnickname">cancelar</button>
+                    <button type="submit">guardar cambios</button>
+                </form>
+            </dialog>
+            <dialog id="mdlmail" class="editnombre estilomodal">
+                <form method="dialog">
+                    <label>nuevo mail</label>
+                    <input type="mail" name="nuevomail" id="nuevomail">
+                    <button id="btncancelarmail">cancelar</button>
+                    <button type="submit">guardar cambios</button>
+                </form>
+            </dialog>
+            <dialog id="mdlcontrasena" class="editnombre estilomodal">
+                <form method="dialog">
+                    <label>nueva contraseña</label>
+                    <input type="text" name="nuevacontrasena" id="nuevacontrasena">
+                    <button id="btncancelarcontrasena">cancelar</button>
+                    <button type="submit">guardar cambios</button>
+                </form>
+            </dialog>
+        </div>
+    </section>
+    <div class="footer">
+        <footer>
+            <h1 class="text-footer">Derechos reservados</h1>
+            <p>Pablo Carcamo Manuel Roque Emiliano Gonzalez</p>
+        </footer>
+    </div>
+    <script src="editarperfil.js"></script>
+</body>
+
+</html>
