@@ -13,7 +13,6 @@ formulario.addEventListener('submit',(event) =>{
     event.preventDefault()
     
     const formData = new FormData(formulario)
-    console.table(Object.fromEntries(formData))
 
     const user = {
         user:{

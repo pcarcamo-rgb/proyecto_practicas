@@ -9,9 +9,11 @@ function verifyLogin  () {
         const partOfUsContainer = document.getElementById('partOfUsContainer')
         const calculadora = document.getElementById('calculadora')
 
+
         linkAccess.style.display = 'none'
         accessButton.style.display = 'none'
         linkUser.style.display = 'block'
+        linkUser.href = `/pagusuario/usuario.html?id=${user[0].idUsuario}`;
         userButton.style.display = 'block'
         userButton.innerText = user[0].usernameUsuario
         
