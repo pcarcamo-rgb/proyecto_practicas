@@ -45,7 +45,7 @@ formulario.addEventListener('submit', (event) => {
             }
             return resp;
         })
-        .then(info => {
+        .then(response => {
             const info = response.info;
             if (info.status === "OK") {
                 alert(info.message);
