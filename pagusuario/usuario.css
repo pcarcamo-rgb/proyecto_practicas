@@ -641,3 +641,62 @@ label {
   align-items: center;
   margin-top: 20px;
 }
+
+
+
+
+#modalUser {
+  margin: 0 auto;
+  transform: translateY(10em);
+  width: 450px;
+  height: 200px;
+  text-align: center;
+  border-radius: 1em;
+  border: none;
+  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+}
+
+#modalUser div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#modalUser h1 {
+  color: black;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+#modalUser button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+#modalUser button:hover {
+  transform: scale(1.02);
+  transform: translateY(-5px);
+  background-color: #00ADB5;
+  color: #FFF;
+}
+
+#modalUserContent {
+  color: black;
+  margin-top: 20px;
+}

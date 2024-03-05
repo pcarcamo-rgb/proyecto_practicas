@@ -99,6 +99,9 @@ deleteUser.addEventListener('click', () => {
             .then(response => {
                 if (response.ok) {
                     console.log('Usuario eliminado exitosamente');
+                    deleteModal.close();
+                    showModal('Su usuario se borro completamente, muchas gracias por utilizar CodeGuru!')
+                    
 
                 } else {
                     console.error('Error al eliminar usuario:', response.status);
@@ -116,6 +119,9 @@ deleteUser.addEventListener('click', () => {
             .then(response => {
                 if (response.ok) {
                     console.log('Usuario dado de baja exitosamente');
+                    deleteModal.close();
+                    showModal('Su usuario se dio dado de baja! Muchas gracias por usar CodeGuru')
+                   
 
                 } else {
                     console.error('Error al eliminar usuario:', response.status);
@@ -128,3 +134,15 @@ deleteUser.addEventListener('click', () => {
             });
     }
 })
+
+
+
+const modal = document.getElementById('modalUser')
+const showModal  = ( message ) => {
+    const modalContent = document.getElementById('modalUserContent')
+    modalContent.innerHTML = message;
+    modal.showModal()
+}
+const closeModal = () => {
+    modal.close();
+}

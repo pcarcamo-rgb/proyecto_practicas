@@ -127,8 +127,6 @@ const login = () => {
 }
 
 const errorMessage = (messageError) => {
-    console.log(messageError)
-
     const content = document.getElementById('errorModalContent')
 
     content.innerHTML = messageError;
@@ -155,7 +153,7 @@ const verifyData = ( data ) => {
     if (user.telefonoUsuario.length < 9) {
         return { isValid: false, errorMessage: "El número de teléfono debe tener al menos 10 dígitos." };
     }
-    
+
     if (!patronContrasena.test(user.passwordUsuario)) {
         return { isValid: false, errorMessage: "La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número." };
     }
