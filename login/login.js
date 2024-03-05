@@ -99,7 +99,7 @@ const login = () => {
                 if (res.status === 200) {
                     return res.json()
                 } else {
-                    throw new Error('Error interno al intentar iniciar sesion' + res.status + " " + res.statusText)
+                    throw new Error('Al iniciar sesion, Usuario o Contraseña incorrectos.')
                 }
             })
             .then((data) => {
@@ -112,7 +112,7 @@ const login = () => {
 
             })
             .catch(error => {
-
+                errorMessage(error)
                 throw (error)
             })
     }
