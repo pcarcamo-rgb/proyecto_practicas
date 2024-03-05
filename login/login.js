@@ -32,7 +32,10 @@ formulario.addEventListener('submit', (event) => {
         }
     }
 
-    fetch('https://gregarious-raindrop-0fb73e.netlify.app/registUser', {
+    const validation = verifyData(user);
+
+    if(validation.isValid){
+        fetch('https://gregarious-raindrop-0fb73e.netlify.app/registUser', {
         method: "POST",
         body: JSON.stringify(user),
         headers: { "Content-type": "application/json; charset=UTF-8" }
@@ -57,6 +60,11 @@ formulario.addEventListener('submit', (event) => {
             console.error('Hubo un error:', error.message);
             return;
         });
+    }else{
+        errorMessage(validation.errorMessage);
+    }
+
+    
 
 
 })
@@ -129,4 +137,27 @@ const errorMessage = (messageError) => {
 
 const closeModal = () => {
     errorModal.close()
+}
+
+const verifyData = ( data ) => {
+    
+    const {user} = data;
+    const patronCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const patronNombreApellido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/;
+    const patronContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+    if (!patronNombreApellido.test(user.apellidoUsuario) || !patronNombreApellido.test(user.nombreUsuario)) {
+        return { isValid: false, errorMessage: "El nombre o el apellido no son válidos." };
+    }
+
+    if(!patronCorreo.test(user.emailUsuario)) return { isValid: false, errorMessage: "El correo electrónico no es válido." };
+    
+    if (user.telefonoUsuario.length < 9) {
+        return { isValid: false, errorMessage: "El número de teléfono debe tener al menos 10 dígitos." };
+    }
+    
+    if (!patronContrasena.test(user.passwordUsuario)) {
+        return { isValid: false, errorMessage: "La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número." };
+    }
+    return { isValid: true };
 }

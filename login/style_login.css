@@ -190,8 +190,8 @@ button {
 #errorModal {
   margin: 0 auto;
   transform: translateY(10em);
-  width: 400px;
-  height: 150px;
+  width: 450px;
+  height: 200px;
   text-align: center;
   border-radius: 1em;
   border: none;
