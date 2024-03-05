@@ -46,10 +46,12 @@ formulario.addEventListener('submit', (event) => {
             return resp;
         })
         .then(info => {
+            const info = response.info;
             if (info.status === "OK") {
                 alert(info.message);
                 sendEmail(formData.get('mail'), info.userId);
             }
+
         })
         .catch(error => {
             console.error('Hubo un error:', error.message);
